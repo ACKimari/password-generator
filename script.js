@@ -1,67 +1,57 @@
-// Assignment Code
-var userChoice = prompt("Choose a password length between 8 - 128")
-
-for (i = 0; i >= 8; i++){
-
-    Math.floor(Math.random())
-
-}
-
-
+var characters = "";
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var specialCharacters = "_!#$%&'*+,-./:<=>?@\^|~";
 
-
-if (userChoice < 8 && userChoice > 128){
-    alert("Please enter valid number");
-} else if (userChoice >= 8 && userChoice <= 128) {
-    var lowercase = window.confirm ("Would you like lowercase letters generated in your password?")
-} if (userChoice !== true && userChoice == true) {
-    var uppercase = window.confirm ("Would you like uppercase letters generated in your password?")
-} if (userChoice !== true && userChoice == true){
-    var numbers = window.confirm ("Would you like numbers generated in your password?")
-} if (userChoice !== true && userChoice == true){
-    var specialCharacters = window.confirm ("Would you like special characters generated in your password?")
-} else if (userChoice !== lowercase && userChoice !== uppercase && userChoice !==numbers && userChoice !== specialCharacters){
-    alert("Please choose at least one of the categories")
+function passwordLength() {
+    length = prompt("Choose a number between 8 and 128");
+    if (length < 8 || length > 128) {
+        passwordLength()
+    }
+    return length;
 }
 
 
 function generatePassword() {
-    
-    let  = document.getElementById("number").value;
-}
+    var passwordNum = passwordLength()
+    if (prompt("Would you like lowercase letters generated in your password? (Y/N)") === "Y") {
+        characters += lowercase;
+        console.log(characters)
+    } if (prompt("Would you like uppercase letters generated in your password? (Y/N)") === "Y") {
+        characters += uppercase;
+        console.log(characters)
+    } if (prompt("Would you like numbers generated in your password? (Y/N)") === "Y") {
+        characters += numbers;
+        console.log(characters);
+    } if (prompt("Would you like special characters generated in your password? (Y/N)") === "Y") {
+        characters += specialCharacters;
+        console.log(characters);
+    } if (characters == "") {
+        alert("Please choose at least one of the categories")
+    } else {
+        var password = "";
+        for (let i = 1; i < parseInt(passwordNum) + 1; i++) {
+            console.log(i);
+            password += characters.charAt(
+                Math.floor(Math.random() * characters.length)
+            );
+            console.log(password);
+        }
+        return password
+    }
+    // return ""
+};
 
-var choices = ["lowercase", "uppercase", "numbers", "specialCharacters"]
-
-var cpuChoice = [choices]
-
-function randomPassword(cpuChoice){
-    return cpuChoice[Math.floor(Math.random()*cpuChoice)]
-}
+function displayPassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+    if (password != undefined) {
+        passwordText.value = password;
+    }
+};
 
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-    
-    
-    passwordText.value = password;
-    
-}
+generateBtn.addEventListener("click", displayPassword);
 
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", function (writePassword){
-    var element = writePassword.apply;
-    console.log(element);
-
-        var state = element.getAttribute("data-state");
-        console.log(state);
-
-        // if ()
-});

@@ -2,13 +2,13 @@
 
 ## Project Description
 
-This Project was challenging and mysteriously fun to do. I may have not hacked it but I can gurantee I learned so many new codes via research on how to tackle certain steps. My motivation was not having an error on my console and the crave to feel the satisfaction of completing the task. 
+This Project was challenging and mysteriously fun to do. I was able to hack it and within the process, I learned so many new codes via research on how to tackle certain steps. My motivation was not having an error on my console. 
 
 I built this project to understand the coding elements used to generate passwords as it's a prevalent and important feature in the tech world! It solves the problem of being hacked and having sensitive information or data leaked or publicized. 
 
-This project taught me of the need to fully understand coding terms/elements so as to excecute them with ease. It also taught me and showed me the beauty of Javascript in coding.
+This project taught me of the need to fully understand coding terms/elements so as to excecute them with ease. It also taught me and showed me the beauty of Javascript in coding. 
 
-Finally, I suppose what would make my project stand out is the attempt to structure the codes in Javascript with a flow of the steps asked of us. I may have been challenged in formatting them as needed or adding the necessary codes, but my understanding via class activities and research is projected in my work.
+I will be utilizing this project in my future vocations.
 
 ## Installation
 
@@ -30,22 +30,13 @@ Step 8: Return
 
 ## Usage
 
+![Generated Password with 15 characters](assets/images/generatedPassword15.png)
 
-![Screenshot](assets/images/one.png)
 
-![Screenshot](assets/images/two.png)
+![Generated Password with 20 characters](assets/images/generatedPassword20.png)
 
-![Screenshot](assets/images/three.png)
 
-![Screenshot](assets/images/four.png)
-
-![Screenshot](assets/images/five.png)
-
-![Screenshot](assets/images/six.png)
-
-![Screenshot](assets/images/seven.png)
-
----
+![Prompt](assets/images/prompt.png)
 
 ## Credits
 
